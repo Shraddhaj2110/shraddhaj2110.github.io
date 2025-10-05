@@ -1,1533 +1,884 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shraddha Jadhav - Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/shraddha.jpg"
-      type="image/x-icon"
-    />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      .favicon-image {
-        width: 150px; /* Adjust the width as needed */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Slightly rounded corners */
-        border: 2px solid #000; /* Optional: Add a border */
-        overflow: hidden; /* Ensures content stays within rounded corners */
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shraddha Jadhav | Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/shraddha.jpg" type="image/x-icon" />
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ==== RESET & BASE ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #F8F9FA;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    ul {
+      list-style: none;
+    }
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    
+    /* ==== LAYOUT ==== */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      min-height: 100vh;
+    }
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
       }
-
-      .bouncy-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 42px;
-  font-weight: 600;
-  color: #ffb400;
-  text-align: center;
-  margin-top: 20px;
-  animation: bounceIn 2s ease infinite alternate;
-}
-
-.bouncy-text span {
-  color: #ffd580;
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-15px);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-    </style>
-
-  </head>
-
-  <body>
-    <!--
-    - #MAIN
-  -->
-
-    <main>
-      <!--
-      - #SIDEBAR
-    -->
-
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img
-              src="./assets/images/shraddha.jpg"
-              alt="Shraddha Jadhav"
-              class="favicon-image" width="80"
-            />
-          </figure>
-
-          <div class="info-content">
-            <h1 class="name" title="Shraddha Jadhav">Shraddha Jadhav</h1>
-
-            <p class="title">MS Information Systems at CSULB</p>
-          </div>
-
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
-        </div>
-
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a href="mailto:shraddhasukhadevjadhav@gmail.com" class="contact-link"
-                  >shraddhasukhadevjadhav@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-
-                <a href="tel:+12136752895" class="contact-link"
-                  >+1 (562) 615-1588</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>Long Beach, California, USA</address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/shraddha-jadhav2110/"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://github.com/Shraddhaj2110"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://www.instagram.com/_.__shraddha_.__/"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <!--
-      - #main-content
-    -->
-
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <!-- <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Projects</button>
-            </li> -->
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
-      -->
-
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-
-         
-            <h4 class="h4 service-item-title">📍 Mumbai | India</h4>
-
-          </header>
-
-          <section class="about-text">
-            <p style="text-align: justify">
-             
-            <h1 class="bouncy-text">👋 Hi, I’m <span>Shraddha</span>
- 
-             
-
-I’ve spent more than 4 years running creative ops, production, and making things happen. Currently pursuing a Master’s in Information Systems at California State University, Long Beach
-
-Now, I build projects/solutions that help people like you get things done. I’m all about simplifying workflows, improving communication, and finding solutions that workout for the community.
-
-<!--
-        - #ABOUT
-  
-               
-              I am a skilled Web Developer with over three years of experience in designing and building responsive, user-centric websites and applications. Proficient in PHP, HTML, CSS, JavaScript, and jQuery, I specialize in creating performance-driven web solutions, integrating RESTful APIs, and managing content through CMS platforms like Drupal, WordPress, and Joomla. </p>
-
-
-<p>
-              Currently pursuing a Master’s in Information Systems at California State University, Long Beach (4.0 GPA), I bring advanced technical and analytical skills to every project. I have successfully led data-driven initiatives like Climate Data Analysis and Hospital Management Systems, leveraging Python, Tableau, and SQL for impactful decision-making. With a proven track record in web design, backend development, and training.
-              
-            </p> <p>    
-              I am passionate about delivering innovative solutions and driving digital transformation. </p>   
-              
-              
-              <p>
-💡 Expertise: Product management, Python, SQL, Tableau, data analytics, and machine learning. I specialize in optimizing workflows, enhancing customer engagement, and improving operational efficiency through innovative, data-driven strategies.
-</p>   <p>
-🎯 Passion: Driving innovation with agile methodologies, user-focused designs, and impactful decision-making.
-
-            </p>    -->
-            
-          </section>
-
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What i'm doing</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/dataAnal.png
-                "
-                    alt="design icon"
-                    width="50"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Analysis</h4>
-
-                  <p class="service-item-text">
-                    Deriving actionable Insights from Data for informed
-                    decision-making.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/dataVisu.png"
-                    alt="Web development icon"
-                    width="50"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Visualization</h4>
-
-                  <p class="service-item-text">
-                    Communicating through intuitive interactive Dashboards and
-                    Visuals.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/supplyChain.png"
-                    alt="mobile app icon"
-                    width="50"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">CRM & Campaign Management</h4>
-
-                  <p class="service-item-text">
-                    Optimizing cross-channel campaigns using Adobe campaign classic, AEM, AEP tools for user engagement and reporting.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/public.png"
-                    alt="camera icon"
-                    width="50"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Communication & Collaboration
-                  </h4>
-
-                  <p class="service-item-text">
-                    Influencing stake holders through data storytelling and
-                    impactful presentations.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials
-        -->
-
-          <section class="testimonials">
-            <h3 class="h3 testimonials-title">Testimonials</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-4.png"
-                      alt="Rishabh Jain"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Rishabh Jain
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                     Shraddha drove significant improvements through exceptional
-                      data analysis abilities and impactful visualization
-                      dashboards.   
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-9.png"
-                      alt="Harshith"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                   Akshay Jain
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Shraddha's engaging data storytelling and collaborative
-                      spirit effectively brought stakeholders together.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-3.png"
-                      alt="Humanvitha"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Turpti Gaikwad
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      I was continually impressed by Shraddha's hard-working nature 
-                      depicting outstanding performance, exemplary work ethic, and notable contributions in both technical 
-                      and non-technical areas possesing the abilities to compel audiences through
-                      data-driven presentations.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-8.png"
-                      alt="Suresh Kumar"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                   Shubham Haral
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Shraddha optimized our dashboards and email marketing campaigns through strong SQL,
-                      Javascript, data visualization skills and collaborative
-                      approach.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials modal
-        -->
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img
-                    src="./assets/images/avatar-1.png"
-                    alt="Rishabh Jain"
-                    width="80"
-                    data-modal-img
-                  />
-                </figure>
-
-                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
-              </div>
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title>Rishabh Jain</h4>
-
-                <!-- <time datetime="2022-01-16">16 January, 2022</time> -->
-
-                <div data-modal-text>
-                  <p>
-                    Shraddha was an invaluable asset to our organization during her tenure as an Associate Software Engineer, I have observed her to be hard-working, depicting outstanding performance, exemplary work ethic, and notable contributions in both technical and non-technical areas.
-Throughout her tenure with us, she has worked on two different project domains, specifically in the telecommunications and pharmaceutical verticals including various software tools. Within the domain of technical management, Shraddha exhibited remarkable expertise in data migration and integration projects to transition to a new production environment. She was awarded a Certificate of Recognition for Individual Brilliance. Additionally, she undertook self-training and instructor-led training to prepare for the Expert level - Business Practitioner exam. Despite balancing her professional responsibilities, successfully she completed the training earning her certification as a Certified Expert. 
-
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-          <!-- Certifications -->
-          <section class="testimonials">
-            <h3 class="h3 testimonials-title">Certifications</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" style="height: 138.2px">
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/Adobe_Certified_Expert_Experience_Cloud_products_Digital_Badge.png" 
-                      href="https://www.credly.com/badges/e359cb67-adf3-4883-a15f-854ec3185446/linked_in?t=sbcwei"
-                      alt="course1"
-                      width="60px"
-                      data-testimonials-avatar=""
-                    />
-                  </figure>
-
-                  <h4 class="h4 testimonials-item-title">
-                    Adobe<a
-                      href="https://drive.google.com/drive/folders/1CuRN3usPIr73rbCK76YghH3AnFyd2o0z"
-                      target="_blank"
-                    >
-                      <img
-                        src="./assets/images/openlink.png" 
-                        href="https://www.credly.com/badges/e359cb67-adf3-4883-a15f-854ec3185446/linked_in?t=sbcwei"
-                        height="20px"
-                        ,
-                        width="30px"
-                        style="display: inline !important; padding-left: 10px"
-                    /></a>
-                  </h4>
-                  <div class="testimonials-text" data-testimonials-text="">
-                    <p> Adobe Certified Expert - Adobe Campaign Classic Business Practitioner</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <div class="modal-container" data-modal-container="">
-            <div class="overlay" data-overlay=""></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn="">
-                <ion-icon
-                  name="close-outline"
-                  role="img"
-                  class="md hydrated"
-                  aria-label="close outline"
-                ></ion-icon>
-              </button>
-
-              <!-- <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-                </figure>
-  
-                <img src="./assets/images/icon-quote.svg" alt="quote icon">
-              </div> -->
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title="">Google</h4>
-
-                <!-- <time datetime="2021-06-14">Issued on Sep 2021</time> -->
-
-                <div data-modal-text="">
-                  <p>The Bits and Bytes of Computer Networking</p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </article>
-
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <!-- <header>
-            <h2 class="h2 article-title">
-              Resume
-              <a
-                href="./assets/docs/Resume_Shraddha_Jadhav.pdf"
-                target="_blank"
-                style="display: inline"
-                ><img
-                  src="./assets/images/resume-download.png"
-                  alt="resume"
-                  width="30"
-                  height="30"
-                  style="display: inline"
-              /></a>
-            </h2>
-          </header> -->
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  California State University - Long Beach
-                </h4>
-
-                <span>August 2024 - May 2026</span>
-
-                <p class="timeline-text">
-                  Master of Science in Information Systems
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                    Centre for Development of Advanced Computing (C-DAC)
-                </h4>
-
-                <span>August 2019 - March 2020</span>
-
-                <p class="timeline-text">
-                    Post Graduate Diploma in Advanced Computing
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  University of Mumbai | Don Bosco Institute of Technology, India
-                </h4>
-
-                <span>August 2015 - May 2019</span>
-
-                <p class="timeline-text"> Bachelor of Science in Information Technology</p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="cog"></ion-icon>
-              </div>
-
-              <h3 class="h3">Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Plan.Net Technest, Mumbai | India</h4>
-                <p class="timeline-text">
-                  CRM Senior Web Developer</p>
-
-                <span>December 2021 - July 2024</span>
-
-                <p class="timeline-text" style="text-align: justify">
-                  Designed and developed user-centric websites using PHP, HTML, CSS, JavaScript, and jQuery, integrating RESTful APIs to enhance functionality and user experience while conducting analytics to optimize performance. Managed content updates on Drupal and WordPress, ensuring compliance with security and accessibility standards, and automated backend tasks using Spring Boot for streamlined data transfer. Collaborated with clients to gather requirements, set timelines, and deliver projects successfully, while leading Adobe Campaign training programs and knowledge-sharing sessions to enhance team proficiency. Supported hosting operations and backend integrations on AWS and cPanel, resolving technical issues to improve workflow efficiency.  </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                    Merkle Inspire Pvt. Ltd</h4>
-                <p class="timeline-text">Web Developer</p>
-
-                <span>Mar 2020 - Dec-2021</span>
-
-                <p class="timeline-text" style="text-align: justify">
-                  I have extensive experience in customizing extensions using PHP, Bootstrap, and JavaScript for content management systems like Joomla, enabling enhanced functionality and user experience. Additionally, I have worked on React.js and Spring Boot to develop backend solutions that are both scalable and efficient. My expertise includes creating workflow templates, page templates, and reusable code while optimizing data schemas to improve CMS performance. I have also designed newsletters and built responsive campaigns using HTML and CSS. Furthermore, I have resolved website issues by troubleshooting API integrations and optimizing web performance, utilizing website analyzers and debugging tools to monitor error logs and address bottlenecks effectively. My experience with the Adobe Analytics platform includes managing import/export workflows, web apps, journey optimization, Message Center, and Offer Management, ensuring seamless and data-driven operations.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                    Centre for Development of Advanced Computing (C-DAC)
-                </h4>
-              
-                <p class="timeline-text">Communication Leader</p>
-                <span>August 2019 - Feb 2020</span>
-
-                <p class="timeline-text" style="text-align: justify">
-                    As a Communication Leader and Event Organizer, I coordinated communication strategies for university events, ensuring seamless interaction between stakeholders and attendees. I played a key role in organizing and managing events, overseeing logistics, volunteer coordination, and promotional efforts. Through effective marketing and communication, I increased event attendance by 40%. I also led a team of volunteers, ensuring smooth operations and high attendee satisfaction. My work contributed to successful, on-time event executions and strengthened campus engagement.
-
-                </p>
-              </li>
-              <!-- <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Associated Business Students Organization Council (ABSOC)
-                </h4>
-                <p class="timeline-text">
-                 Voleentership | Meet the Industries Expo 
-                </p>
-
-                <span>September 2024 - Present</span>
-
-                <p class="timeline-text" style="text-align: justify">
-                  I am responsible for coordinating all activities including
-                  attending Executive Board and General Board meetings, working
-                  with the Analytics Group to establish budget and secure
-                  sponsorships, maintaining planning records, establishing
-                  connections with companies to exhibit, appointing committee
-                  members with President approval, carrying out additional
-                  prescribed duties, and overseeing the entire planning and
-                  execution of this major event.
-                </p>
-              </li> -->
-              <!-- <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Beach Pride Events Council, Associated Students Inc.
-                </h4>
-                <p class="timeline-text">Council Member</p>
-
-                <span>August 2024 - Present</span>
-
-                <p class="timeline-text" style="text-align: justify">
-                 Assisted in planning for 25+ events by analyzing participants response
-                  data to identify popular activities, resulting in 15% higher
-                  turnout. Drove efficiencies by creating itemized budgets for
-                  each event, enabling teams to deliver programming 25% under
-                  budget.
-                </p>
-              </li>
-                -->
- 
-
-               
-            </ol>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5" style="color: #ceb15a">
-                    Languages
-                    <span class="h5"
-                      >  JavaScript, C, HTML, CSS
-   C++, Python, Java, SQL, NoSQL, 
-                      Adobe Campaign Classic, Tableau, Power BI, MS Word, MS Excel
-                      
-                      </span
-                    >
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5" style="color: #ceb15a">
-                    Libraries
-                    <span class="h5"
-                      >Pandas, Numpy</span
-                    >
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5" style="color: #ceb15a">
-                    Databases <span class="h5">MS SQL Server, PostgreSQL</span>
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5" style="color: #ceb15a">
-                    Tools
-                    <span class="h5"
-                      >Git, VS Code, Eclipse, Jupyter Notebook, Word,
-                      Excel, PowerPoint, Amazon Quicksight, Google Data
-                      Studio, Adobe Campaign Classic, UNICA, Redpoint.
-                      </span
-                    >
-                  </h5>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="portfolio" data-page="projects">
-          <header>
-            <h2 class="h2 article-title">Projects</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>IBM SPSS</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Python</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>SQL</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Data Analysis & Visualization</button>
-              </li>
-            </ul>
-
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="filter-item">
-                  <button data-filter-btn>IBM SPSS</button>
-                </li>
-
-                <li class="filter-item">
-                  <button data-filter-btn>Python</button>
-                </li>
-
-                <li class="filter-item">
-                  <button data-filter-btn>SQL</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>
-                    Data Analysis & Visualization
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="project-list">
-              <!-- new projects -->
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="ibm spss"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1Suo0q77rBFC787Q_q6M9zmrAvX_cpYY7?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Animal Shelter.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Animal Shelter Data Analysis</h3>
-
-                  <p class="project-category">IBM SPSS</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1Znswt8SE4UpjfSP7REaXxDtq-AvMifCD?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Customer Churn.png   "
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Customer Churn Analysis</h3>
-
-                  <p class="project-category">PowerBI</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="sql"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1BXVtK3nQJOsQVhybbOMSgco4z4Cgj_jd?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Data Mart.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Data Mart Analysis</h3>
-
-                  <p class="project-category">SQL</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1L2EfZ2r11EOorzbo072tp7dX_ehkapN4?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Life Expectancy.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Life Expectancy Analysis</h3>
-
-                  <p class="project-category">PowerBI</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="python"
-              >
-                <a
-                  href="https://github.com/ShinyPorwal/Shiny_Porwal"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/contactDetail.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Contact Management System</h3>
-
-                  <p class="project-category">Django, CRUD</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1zC2Xo63esjcazSD3i_ClkZqIQgVzFx9u?usp=drive_link"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Loan Application.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Loan Application Analysis</h3>
-
-                  <p class="project-category">Tableau</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/10FHgGW9bmDt6NHSxt6DAES41gIRzW_PE?usp=drive_link"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/superstore.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Superstore Analysis</h3>
-
-                  <p class="project-category">Tableau</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/12m3iY-9hhBnq6wvKJONWW78VuGs74iMG?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/road-accident-cover.png"
-                      alt="road-accident-analysis"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Road Accident Analysis</h3>
-
-                  <p class="project-category">Tableau, PowerBI, Excel</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="python"
-              >
-                <a
-                  href="https://github.com/ShinyPorwal/Projects/tree/main/Diwali_Sale_Analysis"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/diwali-cover.jpg"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Diwali Sales Analysis</h3>
-
-                  <p class="project-category">Python</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1nZZCh8LibSD4_9kGgK-9S6yPBriNtDlc?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/hr-analytics-cover.png"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">HR Analytics Dashboard</h3>
-
-                  <p class="project-category">Tableau, PowerBI, Excel</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1XxgyNEY5ROki6mGFAPE0Ed30fdlh6FC0?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/bike-sale-cover.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Bike Sales Dashboard</h3>
-
-                  <p class="project-category">Excel</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="python"
-              >
-                <a
-                  href="https://github.com/ShinyPorwal/Projects/tree/main/Music_Store_Analysis"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/music-analysis-cover.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Music Store Analysis</h3>
-
-                  <p class="project-category">Python</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1GOMwpOruIZONYPi98Tw7ZWNb_bE7ZqVW?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Hotel Booking.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Hotel Booking Analysis</h3>
-
-                  <p class="project-category">Amazon QuickSight</p>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="data analysis & visualization"
-              >
-                <a
-                  href="https://drive.google.com/drive/folders/1p_auDgVEhXTq8dtM0lOPtfPPOSTI4tfT?usp=drive_link"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Patient Info.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Patient Information Analysis</h3>
-
-                  <p class="project-category">Amazon QuickSight</p>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #BLOG
-      -->
-
-        <!-- <article class="blog" data-page="blog">
-          <header>
-            <h2 class="h2 article-title">Blog</h2>
-          </header>
-
-          <section class="blog-posts">
-            <ul class="blog-posts-list">
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-1.jpg"
-                      alt="Design conferences in 2022"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Design conferences in 2022
-                    </h3>
-
-                    <p class="blog-text">
-                      Veritatis et quasi architecto beatae vitae dicta sunt,
-                      explicabo.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-2.jpg"
-                      alt="Best fonts every designer"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Best fonts every designer
-                    </h3>
-
-                    <p class="blog-text">
-                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
-                      est eligendi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-3.jpg"
-                      alt="Design digest #80"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                    <p class="blog-text">
-                      Excepteur sint occaecat cupidatat no proident, quis
-                      nostrum exercitationem ullam corporis suscipit.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-4.jpg"
-                      alt="UI interactions of the week"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      UI interactions of the week
-                    </h3>
-
-                    <p class="blog-text">
-                      Enim ad minim veniam, consectetur adipiscing elit, quis
-                      nostrud exercitation ullamco laboris nisi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-5.jpg"
-                      alt="The forgotten art of spacing"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      The forgotten art of spacing
-                    </h3>
-
-                    <p class="blog-text">
-                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-6.jpg"
-                      alt="Design digest #79"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                    <p class="blog-text">
-                      Optio cumque nihil impedit uo minus quod maxime placeat,
-                      velit esse cillum.
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article> -->
-
-        <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact</h2>
-          </header>
-
-          <section class="mapbox" data-mapbox>
-            <figure>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.1452323754047!2d-118.1202401187234!3d33.78274756298279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd3155456d9aeb%3A0xff167768b0b635fc!2sCSULB!5e0!3m2!1sen!2sus!4v1694912035708!5m2!1sen!2sus"
-                width="400"
-                height="300"
-                loading="lazy"
-              ></iframe>
-            </figure>
-          </section>
-
-          <section class="contact-form">
-            <h3 class="h3 form-title">Contact Form</h3>
-
-            <form
-              action="mailto:shraddhasukhadevjadhav@gmail.com"
-              method="post"
-              enctype="text/plain"
-              class="form"
-              data-form
-            >
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="Full-name:"
-                  class="form-input"
-                  placeholder="Full name"
-                  required
-                  data-form-input
-                />
-
-                <input
-                  type="email"
-                  name="Email"
-                  class="form-input"
-                  placeholder="Email address"
-                  required
-                  data-form-input
-                />
-              </div>
-
-              <textarea
-                name="Message"
-                class="form-input"
-                placeholder="Your Message"
-                required
-                data-form-input
-              ></textarea>
-
-              <button
-                class="form-btn"
-                type="submit"
-                value="Send"
-                disabled
-                data-form-btn
-              >
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
-            </form>
-          </section>
-        </article>
+    }
+    
+    /* ==== SIDEBAR / NAV ==== */
+    .sidebar {
+      background-color: #ffffff;
+      border-right: 1px solid #E0E0E0;
+      padding: 2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .sidebar .avatar-box {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar .avatar-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0066CC;
+    }
+    .sidebar .info {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .sidebar .info h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+      color: #212529;
+    }
+    .sidebar .info p.title {
+      color: #555555;
+      font-weight: 500;
+    }
+    .sidebar .contacts-list, .sidebar .social-list {
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+    .sidebar .contacts-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .sidebar .contacts-list .icon-box {
+      width: 24px;
+      color: #0066CC;
+      margin-right: 0.8rem;
+    }
+    .sidebar .contacts-list .contact-info a {
+      color: #0066CC;
+      word-break: break-all;
+    }
+    .sidebar .social-list {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .sidebar .social-list a {
+      font-size: 1.5rem;
+      color: #555555;
+      transition: color 0.3s;
+    }
+    .sidebar .social-list a:hover {
+      color: #0066CC;
+    }
+    
+    /* ==== MAIN CONTENT ==== */
+    .main {
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    .navbar {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .navbar ul {
+      display: inline-flex;
+      gap: 1rem;
+    }
+    .navbar li button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      color: #555555;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .navbar li button.active,
+    .navbar li button:hover {
+      color: #0066CC;
+    }
+    .navbar li button.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #0066CC;
+      border-radius: 2px;
+    }
+    
+    article {
+      display: none;
+    }
+    article.active {
+      display: block;
+    }
+    
+    article header {
+      margin-bottom: 1rem;
+    }
+    article header .article-title {
+      font-size: 2rem;
+      color: #212529;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* ==== ABOUT SECTION ==== */
+    .about .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #444444;
+    }
+    .bouncy-text {
+      display: inline-block;
+      font-size: 2.2rem;
+      color: #0066CC;
+      animation: bounce 3s ease-in-out infinite alternate;
+    }
+    .bouncy-text span {
+      color: #FFB400;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-10px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-item {
+      background-color: #ffffff;
+      border: 1px solid #E0E0E0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .service-icon-box img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+    .service-item-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #212529;
+    }
+    .service-item-text {
+      font-size: 0.95rem;
+      color: #555555;
+    }
+    
+    /* ==== TESTIMONIALS / CERTIFICATIONS ==== */
+    .testimonials, .certifications {
+      margin-top: 3rem;
+    }
+    .testimonials-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #212529;
+    }
+    .testimonials-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      position: relative;
+    }
+    .testimonial-card .avatar-box {
+      position: absolute;
+      top: -30px;
+      left: 20px;
+    }
+    .testimonial-card .avatar-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+    }
+    .testimonial-card .testimonial-title {
+      margin-top: 2rem;
+      font-weight: 600;
+      color: #212529;
+    }
+    .testimonial-card .testimonial-text {
+      margin-top: 0.8rem;
+      color: #555555;
+      font-size: 0.95rem;
+    }
+    
+    /* ==== RESUME / EXPERIENCE / SKILLS ==== */
+    .timeline {
+      margin-top: 2rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #E0E0E0;
+    }
+    .timeline-list li {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+    .timeline-list li::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #0066CC;
+    }
+    .timeline-item-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #212529;
+    }
+    .timeline span {
+      display: block;
+      margin: 0.3rem 0 0.8rem;
+      color: #666666;
+      font-size: 0.93rem;
+    }
+    .timeline-text {
+      color: #555555;
+      font-size: 0.95rem;
+    }
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .skills-item {
+      background-color: #ffffff;
+      border: 1px solid #E0E0E0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .skills-item h5 {
+      font-size: 1rem;
+      color: #0066CC;
+      margin-bottom: 0.5rem;
+    }
+    .skills-item span {
+      font-weight: 400;
+      color: #333333;
+    }
+    
+    /* ==== PROJECTS / PORTFOLIO ==== */
+    .filter-list {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .filter-list button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #0066CC;
+      border-radius: 4px;
+      color: #0066CC;
+      background: #ffffff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .filter-list button.active,
+    .filter-list button:hover {
+      background-color: #0066CC;
+      color: #ffffff;
+    }
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-item {
+      background-color: #ffffff;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .project-item .project-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .project-item .project-img img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .project-item .project-item-icon-box {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.6);
+      padding: 6px;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-item h3 {
+      font-size: 1.1rem;
+      margin: 0.8rem;
+      color: #212529;
+    }
+    .project-item p {
+      font-size: 0.9rem;
+      margin: 0 0.8rem 1rem;
+      color: #666666;
+    }
+    
+    /* ==== CONTACT ==== */
+    .contact .mapbox {
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .contact-form .form-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #212529;
+    }
+    .contact-form .form {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #E0E0E0;
+    }
+    .contact-form .input-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      .contact-form .input-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact-form .form-input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #333333;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+    .contact-form .form-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #0066CC;
+      padding: 0.7rem 1.3rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .contact-form .form-btn:hover:not(:disabled) {
+      background-color: #0055AA;
+    }
+    .contact-form .form-btn:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="avatar-box">
+        <img src="./assets/images/shraddha.jpg" alt="Shraddha Jadhav" />
       </div>
-    </main>
+      <div class="info">
+        <h1>Shraddha Jadhav</h1>
+        <p class="title">MS Information Systems | CSULB</p>
+      </div>
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:shraddhasukhadevjadhav@gmail.com" class="contact-link">shraddhasukhadevjadhav@gmail.com</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <a href="tel:+15626151588" class="contact-link">+1 (562) 615-1588</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Long Beach, California, USA</address>
+          </div>
+        </li>
+      </ul>
+      <ul class="social-list">
+        <li class="social-item"><a href="https://www.linkedin.com/in/shraddha-jadhav2110/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="social-item"><a href="https://github.com/Shraddhaj2110" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li class="social-item"><a href="https://www.instagram.com/_.__shraddha_.__/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
+    </aside>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link data-target="about">About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="resume">Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="projects">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="contact">Contact</button></li>
+        </ul>
+      </nav>
 
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+      <!-- ABOUT -->
+      <article class="about active" data-page="about">
+        <header><h2 class="article-title">About Me</h2></header>
+        <div class="intro">
+          <p><span class="bouncy-text">👋 Hi, I’m <span>Shraddha</span></span></p>
+          <p>I’ve spent 4+ years running creative ops, production, and making things happen. Now, as a graduate student in Information Systems at CSULB, I build solutions and data-driven projects that help people get things done. I’m passionate about streamlining workflows, improving cross-team communication, and designing tools that work for users and communities.</p>
+        </div>
+        <section class="services">
+          <div class="service-item">
+            <div class="service-icon-box"><img src="./assets/images/dataAnal.png" alt="Data Analysis Icon" /></div>
+            <div class="service-content-box">
+              <h4 class="service-item-title">Data Analysis</h4>
+              <p class="service-item-text">Deriving actionable insights from data for informed decision-making.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon-box"><img src="./assets/images/dataVisu.png" alt="Visualization Icon" /></div>
+            <div class="service-content-box">
+              <h4 class="service-item-title">Data Visualization</h4>
+              <p class="service-item-text">Communicating through intuitive dashboards and visuals.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon-box"><img src="./assets/images/supplyChain.png" alt="CRM Icon" /></div>
+            <div class="service-content-box">
+              <h4 class="service-item-title">CRM & Campaigns</h4>
+              <p class="service-item-text">Optimizing cross-channel campaigns using Adobe tools & analytics.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon-box"><img src="./assets/images/public.png" alt="Communication Icon" /></div>
+            <div class="service-content-box">
+              <h4 class="service-item-title">Communication & Collaboration</h4>
+              <p class="service-item-text">Storytelling with data and influencing stakeholders.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <h3 class="testimonials-title">Testimonials</h3>
+          <ul class="testimonials-list">
+            <li class="testimonial-card">
+              <div class="avatar-box"><img src="./assets/images/avatar-4.png" alt="Rishabh Jain" /></div>
+              <h4 class="testimonial-title">Rishabh Jain</h4>
+              <p class="testimonial-text">“Shraddha drove significant improvements through exceptional data analysis abilities and impactful visualization dashboards.”</p>
+            </li>
+            <li class="testimonial-card">
+              <div class="avatar-box"><img src="./assets/images/avatar-9.png" alt="Akshay Jain" /></div>
+              <h4 class="testimonial-title">Akshay Jain</h4>
+              <p class="testimonial-text">“Shraddha’s engaging data storytelling and collaborative spirit effectively brought stakeholders together.”</p>
+            </li>
+            <!-- Add more testimonial cards here -->
+          </ul>
+        </section>
+
+        <!-- Certifications -->
+<section class="certifications">
+  <h3 class="h3 testimonials-title">Certifications & Awards</h3>
+
+  <ul class="testimonials-list has-scrollbar">
+
+    <!-- Salesforce AI Associate -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/salesforce.png" alt="Salesforce Certified AI Associate" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          Salesforce Certified AI Associate
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/recent-activity/images/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> April 2025<br />
+            Certification in AI fundamentals, NLP, generative AI, and predictive AI within CRM systems using Salesforce.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- AWS Academy Graduate -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/aws.png" alt="AWS Academy Graduate" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          AWS Academy Graduate – Cloud Foundations
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/details/certifications/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> December 2024<br />
+            Completed AWS Academy Cloud Foundations — foundational cloud infrastructure, services, and architecture.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- Google Project Management -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/google.png" alt="Google Project Management Certificates" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          Google Project Management Certificates
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/details/certifications/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> January 2025<br />
+            Completed <em>Foundations of Project Management</em>, <em>Project Initiation</em>, and <em>Project Planning</em> under Google Career Certificates.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- Adobe Certified Expert -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/adobe.png" alt="Adobe Certified Expert" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          Adobe Certified Expert – Campaign Classic
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/recent-activity/images/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> June 2020<br />
+            Adobe Certified Expert in Campaign Classic Business Practitioner — skilled in campaign automation and customer engagement workflows.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- Plan.Net Mountain Mover -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/plan-net.png" alt="Mountain Mover Award" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          Mountain Mover Award – Plan.Net TechNest India
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/recent-activity/images/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> April 2022<br />
+            Awarded for exceptional leadership and innovation in project delivery and team collaboration.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- Ugam Individual Brilliance -->
+    <li class="testimonials-item cert-card">
+      <div class="content-card">
+        <figure class="testimonials-avatar-box">
+          <img src="./assets/images/ugam.png" alt="Individual Brilliance Award" width="60" />
+        </figure>
+        <h4 class="h4 testimonials-item-title">
+          Individual Brilliance Award – Ugam Solutions
+          <a href="https://www.linkedin.com/in/shraddha-jadhav2110/recent-activity/images/" target="_blank">
+            <img src="./assets/images/openlink.png" height="20" width="30" style="padding-left: 8px" />
+          </a>
+        </h4>
+        <div class="testimonials-text">
+          <p><strong>Issued:</strong> June 2021<br />
+            Recognition for outstanding performance and innovative contribution to Ugam (A Merkle Company).</p>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- View All Button -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <a
+      href="https://www.linkedin.com/in/shraddha-jadhav2110/details/certifications/"
+      target="_blank"
+      class="cert-btn"
+    >
+      <ion-icon name="logo-linkedin"></ion-icon>
+      <span>View All Certifications on LinkedIn</span>
+    </a>
+  </div>
+</section>
+
+
+
+
+      </article>
+
+      <!-- RESUME / EXPERIENCE / SKILLS -->
+      <article class="resume" data-page="resume">
+        <header><h2 class="article-title">Resume & Experience</h2></header>
+
+        <section class="timeline">
+          <div class="title-wrapper"><h3>Education</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">California State University – Long Beach</h4>
+              <span>Aug 2024 – May 2026</span>
+              <p class="timeline-text">Master of Science, Information Systems</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">C-DAC (Centre for Development of Advanced Computing)</h4>
+              <span>Aug 2019 – Mar 2020</span>
+              <p class="timeline-text">Post Graduate Diploma in Advanced Computing</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">University of Mumbai / DBIT</h4>
+              <span>Aug 2015 – May 2019</span>
+              <p class="timeline-text">Bachelor of Science, Information Technology</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper"><h3>Experience</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Plan.Net Technest, Mumbai</h4>
+              <span>Dec 2021 – Jul 2024</span>
+              <p class="timeline-text">Senior Web Developer / CRM: Developed user-centric websites, integrated APIs, conducted analytics, led training efforts, managed backend operations, automated workflows.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Merkle Inspire Pvt. Ltd</h4>
+              <span>Mar 2020 – Dec 2021</span>
+              <p class="timeline-text">Web Developer: Customized CMS extensions, built REST APIs, newsletters, resolved integrations, optimized performance.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">C-DAC</h4>
+              <span>Aug 2019 – Feb 2020</span>
+              <p class="timeline-text">Communication Leader: Managed events, stakeholder communication, logistics, volunteer coordination, branding.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skills">
+          <h3 class="article-title">Skills</h3>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <h5>Languages & Tools</h5>
+              <span>JavaScript, C, C++, Python, Java, SQL, NoSQL, HTML, CSS, Tableau, Power BI, Adobe Campaign, Git, VS Code, Jupyter, etc.</span>
+            </li>
+            <li class="skills-item">
+              <h5>Libraries / Data</h5>
+              <span>Pandas, NumPy, etc.</span>
+            </li>
+            <li class="skills-item">
+              <h5>Databases</h5>
+              <span>MS SQL Server, PostgreSQL</span>
+            </li>
+            <li class="skills-item">
+              <h5>Tools / Platforms</h5>
+              <span>Adobe Campaign, UNICA, Redpoint, AWS, cPanel, QuickSight, Google Data Studio, etc.</span>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- PROJECTS / PORTFOLIO -->
+      <article class="projects" data-page="projects">
+        <header><h2 class="article-title">Projects</h2></header>
+        <section class="projects">
+          <ul class="filter-list">
+            <li><button class="active" data-filter-btn data-category="all">All</button></li>
+            <li><button data-filter-btn data-category="python">Python</button></li>
+            <li><button data-filter-btn data-category="sql">SQL</button></li>
+            <li><button data-filter-btn data-category="viz">Visualization</button></li>
+            <li><button data-filter-btn data-category="crm">CRM / Campaigns</button></li>
+          </ul>
+          <ul class="project-list">
+            <!-- Example Project Card -->
+            <li class="project-item" data-category="viz">
+              <a href="https://drive.google.com/drive/folders/1Znswt8SE4UpjfSP7REaXxDtq-AvMifCD?usp=sharing" target="_blank">
+                <div class="project-img">
+                  <img src="./assets/images/Customer Churn.png" alt="Customer Churn Analysis" />
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                </div>
+                <h3>Customer Churn Analysis</h3>
+                <p>Power BI / Data Visualization</p>
+              </a>
+            </li>
+            <!-- Add more project-items similarly -->
+          </ul>
+        </section>
+      </article>
+
+      <!-- CONTACT -->
+      <article class="contact" data-page="contact">
+        <header><h2 class="article-title">Contact Me</h2></header>
+        <section class="mapbox">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.1452323754047!2d-118.1202401187234!3d33.78274756298279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd3155456d9aeb%3A0xff167768b0b635fc!2sCSULB!5e0!3m2!1sen!2sus!4v1694912035708!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section class="contact-form">
+          <h3 class="form-title">Get in Touch</h3>
+          <form action="mailto:shraddhasukhadevjadhav@gmail.com" method="post" enctype="text/plain" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="Full name" class="form-input" placeholder="Full name" required />
+              <input type="email" name="Email" class="form-input" placeholder="Email address" required />
+            </div>
+            <textarea name="Message" class="form-input" placeholder="Your Message" required></textarea>
+            <button class="form-btn" type="submit"><ion-icon name="paper-plane"></ion-icon><span>Send Message</span></button>
+          </form>
+        </section>
+      </article>
+
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Navigation / Section-switcher logic
+    const navButtons = document.querySelectorAll("[data-nav-link]");
+    const pages = document.querySelectorAll("article");
+
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        navButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const target = btn.getAttribute("data-target");
+        pages.forEach(page => {
+          if (page.getAttribute("data-page") === target) {
+            page.classList.add("active");
+          } else {
+            page.classList.remove("active");
+          }
+        });
+      });
+    });
+
+    // (Optional) Filter logic for projects
+    const filterButtons = document.querySelectorAll("[data-filter-btn]");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const cat = btn.getAttribute("data-category");
+        projectItems.forEach(item => {
+          if (cat === "all" || item.getAttribute("data-category").includes(cat)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
 </html>
