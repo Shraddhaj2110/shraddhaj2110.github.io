@@ -37,6 +37,39 @@
         border: 2px solid #000; /* Optional: Add a border */
         overflow: hidden; /* Ensures content stays within rounded corners */
       }
+
+      .bouncy-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #ffb400;
+  text-align: center;
+  margin-top: 20px;
+  animation: bounceIn 2s ease infinite alternate;
+}
+
+.bouncy-text span {
+  color: #ffd580;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
     </style>
 
   </head>
@@ -200,8 +233,9 @@
           <section class="about-text">
             <p style="text-align: justify">
              
-             <h1> Hi, I am Shraddha  <h1>
-              ## Hi, I’m Shraddha
+            <h1 class="bouncy-text">👋 Hi, I’m <span>Shraddha</span>
+ 
+             
 
 I’ve spent more than 4 years running creative ops, production, and making things happen. Currently pursuing a Master’s in Information Systems at California State University, Long Beach
 
