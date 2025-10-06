@@ -1,2 +1,1 @@
-# test
-hms
+ A modern, responsive portfolio built with HTML, CSS, and JavaScript — showcasing my work in data analytics, business analysis, and machine learning. Includes sections for projects, skills, experience, and contact details, with smooth animations and a clean design.
