@@ -23,11 +23,13 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
+body {
   font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
   color:var(--ink);
-  background:linear-gradient(180deg,#F9FAFB 0%, #F1F5F9 55%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #dc99da 0%, #dceca3 50%, #75c5ea 100%);
+  background-attachment: fixed; /* keeps gradient steady while scrolling */
 }
+
 
 /* ===== LAYOUT ===== */
 .wrap{
@@ -268,6 +270,203 @@ textarea{min-height:120px; resize:vertical}
 /* small helpers */
 .mt-8{margin-top:8px} .mt-16{margin-top:16px} .mb-8{margin-bottom:8px}
 .center{ text-align:center }
+
+/* === Sidebar Contact Link Styling === */
+.kv a {
+  color: #2563eb;                    /* soft blue link */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+}
+
+.kv a:hover {
+  color: #4f46e5;                    /* darker blue on hover */
+  text-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
+
+.kv a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+
+.kv a:hover {
+  color: #4f46e5;
+  text-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
+
+.kv a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366F1, #3B82F6);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.kv a:hover::after {
+  width: 100%;
+}
+
+.kv a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;   /* ✅ Keeps text neat & readable */
+  word-break: break-all; /* ✅ Prevents overflow if line is too long */
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  background: #fff;          /* 👈 THIS is the sidebar background color */
+  border-right: 1px solid #eef2f7;
+  padding: 28px 22px;
+  overflow: auto;
+}
+
+/* ===== SIDEBAR (Modern Enhanced Version) ===== */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  background: linear-gradient(180deg, #f4f6ff 0%, #f8faff 100%); /* soft lavender-blue gradient */
+  border-right: 1px solid #e0e7ff;
+  box-shadow: 4px 0 18px rgba(99, 102, 241, 0.08); /* subtle right shadow */
+  padding: 28px 22px;
+  overflow: auto;
+  transition: all 0.3s ease;
+}
+
+/* Slight hover glow for sidebar */
+.sidebar:hover {
+  box-shadow: 6px 0 22px rgba(99, 102, 241, 0.12);
+}
+
+/* Profile section */
+.profile {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 270px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6366F1; /* indigo accent border */
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 30px rgba(99, 102, 241, 0.35);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #6366F1, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  color: #475569;
+  font-weight: 500;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* Contact info */
+.side-block {
+  margin-top: 24px;
+  background: #ffffffb3; /* white with slight transparency */
+  border: 1px solid #e0e7ff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.side-block:hover {
+  transform: translateY(-2px);
+}
+
+.kv {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.kv strong {
+  color: #1e293b;
+}
+
+.kv a {
+  color: #2563eb;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+.kv a:hover {
+  color: #4f46e5;
+  text-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+}
+
+.kv a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366F1, #3B82F6);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.kv a:hover::after {
+  width: 100%;
+}
+
+/* Social icons */
+.icon-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.icon-row a {
+  font-size: 22px;
+  color: #0f172a;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.icon-row a:hover {
+  color: #3B82F6;
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+}
+
+
+
 </style>
 </head>
 <body>
@@ -275,7 +474,9 @@ textarea{min-height:120px; resize:vertical}
 <div class="wrap">
 
   <!-- ===== SIDEBAR ===== -->
+
   <aside class="sidebar">
+    
     <div class="profile">
       <img class="avatar" src="./assets/images/shraddha.jpg" alt="Shraddha Jadhav"/>
       <div class="name">Shraddha Jadhav</div>
@@ -283,11 +484,22 @@ textarea{min-height:120px; resize:vertical}
     </div>
 
     <div class="side-block">
-      <div class="kv">
-        <div><strong>Email:</strong> <a href="mailto:shraddhasukhadevjadhav@gmail.com">shraddhasukhadevjadhav@gmail.com</a></div>
-        <div><strong>Phone:</strong> <a href="tel:+15626151588">+1 (562) 615-1588</a></div>
-        <div><strong>Location:</strong> Long Beach, CA, USA</div>
-      </div>
+    <div class="kv">
+  <div>
+    <strong>Email:</strong>
+    <a href="mailto:shraddhasukhadevjadhav@gmail.com">shraddhasukhadevjadhav@gmail.com</a>
+  </div>
+
+  <div>
+    <strong>Phone:</strong>
+    <a href="tel:+15626151588">+1 (562) 615 1588</a>
+  </div>
+
+  <div>
+    <strong>Location:</strong> Long Beach, CA, USA
+  </div>
+</div>
+
       <div class="icon-row">
         <a href="https://www.linkedin.com/in/shraddha-jadhav2110/" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
         <a href="https://github.com/Shraddhaj2110" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
