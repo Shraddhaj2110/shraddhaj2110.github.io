@@ -94,13 +94,39 @@ body{
 .intro{
   font-size:1.05rem; color:#475569; text-align:left; margin:10px auto 18px; max-width:980px;
 }
-.greet{
-  font-size:2.2rem; font-weight:800; display:flex; align-items:center; gap:8px;
+.greet {
+  font-size: 2.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f172a;
 }
-.greet .name{
-  background:linear-gradient(90deg,#6366F1,#3B82F6);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+
+.greet .name {
+  background: linear-gradient(90deg, #6366F1, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.greet .name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366F1, #3B82F6);
+  transition: width 0.3s ease;
+}
+
+.greet .name:hover::after {
+  width: 100%;
+}
+
 .wave{display:inline-block; transform-origin:70% 70%; animation:wave 2s ease-in-out infinite}
 @keyframes wave{0%{transform:rotate(0)}10%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}60%,100%{transform:rotate(0)}}
 
@@ -288,36 +314,37 @@ textarea{min-height:120px; resize:vertical}
     <section id="about" class="section">
       <h2 class="h2">About</h2>
 
-      <p class="greet">Hi, I’m <span class="name">Shraddha&nbsp;Jadhav</span> <span class="wave">👋</span></p>
+      <h1><p class="greet">Hi, I’m Shraddha&nbsp;Jadhav <span class="wave">👋</span></p></h1>
       <p class="intro">
        I’m a data-driven CRM marketing professional with 4+ years of experience managing omnichannel campaigns and customer engagement programs for global brands like BMW, MINI, AT&T, and Adobe across Europe and the U.S.
+     </p>
 
-I specialize in combining customer data, segmentation, and creative storytelling to design impactful lifecycle journeys that drive retention and loyalty.
+          <p class="intro"> I specialize in combining customer data, segmentation, and creative storytelling to design impactful lifecycle journeys that drive retention and loyalty. </p>
 
-Currently, I’m pursuing my Master’s in Information Systems at California State University, Long Beach, where I mentor students in management and analytics courses and actively participate in AIS hackathons and competitions.
+            <p class="intro"> Currently, I’m pursuing my Master’s in Information Systems at California State University, Long Beach, where I mentor students in management and analytics courses and actively participate in AIS hackathons and competitions.
       </p>
 
       <!-- Services -->
       <div class="grid grid-4 mt-16">
         <div class="service">
           <img src="./assets/images/dataAnal.png" alt="Data Analysis"/>
-          <h4>Data Analysis</h4>
+          <h4>Campaign Manager</h4>
           <p>Transforming raw data into decisions and actions.</p>
         </div>
         <div class="service">
           <img src="./assets/images/dataVisu.png" alt="Data Viz"/>
-          <h4>Data Visualization</h4>
-          <p>Interactive dashboards and clear visual storytelling.</p>
+          <h4>Project Manager</h4>
+          <p>Ensuring end-to-end delivery through process optimization insights.</p>
         </div>
         <div class="service">
           <img src="./assets/images/supplyChain.png" alt="CRM"/>
-          <h4>CRM & Campaigns</h4>
+          <h4>CRM Life cycle Manager</h4>
           <p>Cross-channel journeys powered by Adobe tools & analytics.</p>
         </div>
         <div class="service">
           <img src="./assets/images/public.png" alt="Comms"/>
-          <h4>Communication</h4>
-          <p>Aligning stakeholders through simple, compelling narratives.</p>
+          <h4>Product Manager</h4>
+          <p>Bridging customer needs and business goals through data-driven roadmaps.</p>
         </div>
       </div>
 
@@ -361,23 +388,50 @@ Currently, I’m pursuing my Master’s in Information Systems at California Sta
     <section id="experience" class="section">
       <h2 class="h2">Experience</h2>
 
+     <div class="card">
+  <h4>Plan.Net TechNest India, Mumbai</h4>
+  <div class="meta">Dec 2021 – Jul 2024 | CRM Senior Analyst</div>
+  <ul>
+  Managed multi-channel CRM operations for BMW, MINI & Motorrad using Adobe Campaign, AEM, and Journey Optimizer. 
+  Built automated workflows, optimized segmentation with subscription data, and mentored analysts to standardize CRM processes across regions — improving campaign delivery and engagement performance.
+  </ul>
+</div>
+
       <div class="card">
-        <h4>Plan.Net Technest, Mumbai</h4>
-        <div class="meta">Dec 2021 – Jul 2024 • Senior Web Developer / CRM</div>
-        <p>Built user-centric websites, integrated APIs, led analytics & training, managed backend operations, and automated workflows.</p>
+        <h4>Merkle, Mumbai</h4>
+        <div class="meta">Mar 2020 – Dec 2021 | Associate Software Engineer</div>
+          <ul>Partnered with U.S. clients including AT&T, HCP, Sanofi, and AbbVie to design product-driven marketing workflows using Adobe Marketo. Delivered data-driven consulting to enhance CRM performance, optimize engagement strategy, and improve loyalty outcomes. 
+          Collaborated with creative teams on Figma prototypes to align campaigns with brand and business goals.</ul>
+      </div>
+
+        <div class="card">
+        <h4>csulb mentor</h4>
+        <div class="meta">Aug 2017 – Aug 2019 | Student Engagement Lead</div>
+        <p>Designed and executed engagement programs to strengthen student participation and collaboration across events, workshops, and competitions. 
+          Acted as a bridge between students and faculty to ensure smooth communication and high engagement levels.</p>
       </div>
 
       <div class="card">
-        <h4>Merkle Inspire Pvt. Ltd</h4>
-        <div class="meta">Mar 2020 – Dec 2021 • Web Developer</div>
-        <p>Customized CMS extensions, built REST APIs & newsletters, improved integrations, and optimized performance.</p>
-      </div>
-
-      <div class="card">
-        <h4>C-DAC — Communication Leader</h4>
-        <div class="meta">Aug 2019 – Feb 2020</div>
+        <h4>Center for Development and Advanced Computing, Mumbai</h4>
+        <div class="meta">Aug 2019 – Feb 2020 | Program Communications Manager</div>
         <p>Led internal/external communications, managed events & branding, and supported knowledge sharing across teams.</p>
       </div>
+
+      <div class="card">
+        <h4>Don Bosco Institute of Technology, Mumbai</h4>
+        <div class="meta">Aug 2018 – Feb 2019 | Student Success Coordinator</div>
+          
+         <p>Partnered with academic advisors and leadership to improve student engagement and performance.
+           Developed communication plans to ensure continuous learning, collaboration, and community impact.</p>
+      </div>
+
+    <div class="card">
+        <h4>Don Bosco Institute of Technology, Mumbai</h4>
+        <div class="meta">Aug 2017 – Aug 2019 | Student Engagement Lead</div>
+        <p>Designed and executed engagement programs to strengthen student participation and collaboration across events, workshops, and competitions. 
+          Acted as a bridge between students and faculty to ensure smooth communication and high engagement levels.</p>
+      </div>
+
     </section>
 
     <!-- ===== PROJECTS ===== -->
@@ -387,48 +441,81 @@ Currently, I’m pursuing my Master’s in Information Systems at California Sta
       <!-- Machine Learning -->
       <div class="cat"><span class="badge">Machine Learning</span></div>
       <div class="pgrid">
+
         <article class="pcard">
           <div class="pinner">
             <div>
-              <div class="ptitle">Placeholder ML Project</div>
+              <div class="ptitle">Customer Churn Analysis</div>
               <div class="ptag"><span>Python</span><span>Scikit-learn</span><span>EDA</span></div>
-              <p class="pdesc">Coming soon: predictive model with clean E2E pipeline and model monitoring.</p>
+              <p class="pdesc">Built a churn prediction model to identify customers at risk of leaving using behavioral and transaction data. Applied data cleaning, feature engineering, and 
+                classification models (Logistic Regression, Random Forest) to predict churn probability.
+                Visualized key drivers of churn and retention trends through an interactive Power BI dashboard.</p>
             </div>
             <div></div>
           </div>
         </article>
-        <article class="pcard">
-          <div class="pinner">
-            <div>
-              <div class="ptitle">Placeholder ML Project</div>
-              <div class="ptag"><span>Classification</span><span>Metrics</span></div>
-              <p class="pdesc">Exploring feature importance and bias checks with explainability tools.</p>
-            </div>
-          </div>
-        </article>
+
+        <!-- AI-Driven Sentiment Analysis -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">AI-Driven Sentiment Analysis</div>
+        <div class="ptag">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>NLTK</span>
+          <span>TensorFlow</span>
+          <span>Tableau</span>
+        </div>
+        <p class="pdesc">
+          Developed an AI-driven sentiment analysis model using Python and TensorFlow to process 100K+ customer reviews.
+          Achieved 92% accuracy in classifying sentiment, enabling the identification of key customer segments and insights
+          that improved satisfaction and retention by 15%.
+        </p>
+      </div>
+    </div>
+  </article>
       </div>
 
       <!-- Data Analysis -->
       <div class="cat mt-16"><span class="badge">Data Analysis</span></div>
       <div class="pgrid">
-        <article class="pcard">
-          <div class="pinner">
-            <div>
-              <div class="ptitle">Placeholder Data Analysis</div>
-              <div class="ptag"><span>SQL</span><span>Power BI</span></div>
-              <p class="pdesc">Revenue insights dashboard with DAX measures and drillthrough pages.</p>
-            </div>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pinner">
-            <div>
-              <div class="ptitle">Placeholder Data Analysis</div>
-              <div class="ptag"><span>Python</span><span>Pandas</span></div>
-              <p class="pdesc">Cohort & retention study; tidy data, reusable notebooks, clear visuals.</p>
-            </div>
-          </div>
-        </article>
+         <!-- 2: Revenue Insights Dashboard -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Revenue Insights Dashboard</div>
+        <div class="ptag">
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>DAX</span>
+        </div>
+        <p class="pdesc">
+          Designed an interactive Power BI dashboard consolidating sales and marketing data to track revenue trends, customer lifetime value, and regional performance using DAX measures and drillthrough analytics.
+        </p>
+      </div>
+    </div>
+  </article>
+
+
+    <!-- 4: Campaign Performance Analytics -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Campaign Performance Analytics</div>
+        <div class="ptag">
+          <span>SQL</span>
+          <span>Excel VBA</span>
+          <span>ETL</span>
+        </div>
+        <p class="pdesc">
+          Automated campaign performance reporting by extracting Adobe Campaign data with SQL and Excel macros. Visualized KPIs such as delivery, open, and conversion rates for weekly executive reviews.
+        </p>
+      </div>
+    </div>
+  </article>
+
+
       </div>
 
       <!-- CRM / Campaigns -->
@@ -437,72 +524,202 @@ Currently, I’m pursuing my Master’s in Information Systems at California Sta
         <article class="pcard">
           <div class="pinner">
             <div>
-              <div class="ptitle">Placeholder Journey</div>
-              <div class="ptag"><span>Adobe Campaign</span><span>ETL</span></div>
-              <p class="pdesc">Journey orchestration, segmentation, and triggered comms with KPIs.</p>
+              <div class="ptitle">Lifecycle Journey Optimization</div>
+              <div class="ptag"><span>Adobe Campaign</span><span>ETL</span><span>CRM Analytics</span></div>
+              <p class="pdesc">Designed and automated multi-channel lifecycle journeys (Welcome, Abandoned Cart, Retention) 
+                using Adobe Campaign Classic. Integrated subscription and behavioral 
+                data to trigger real-time communications across Email, Push, and In-App channels.</p>
             </div>
           </div>
         </article>
         <article class="pcard">
           <div class="pinner">
             <div>
-              <div class="ptitle">Placeholder Email Ops</div>
-              <div class="ptag"><span>HTML</span><span>Deliverability</span></div>
-              <p class="pdesc">Templates, QA, personalization logic, and send-time optimization.</p>
+              <div class="ptitle">Email Personalization Engine</div>
+              <div class="ptag"><span>HTML</span><span>SQL</span><span>Adobe Campaign</span><span>Deliverability</span></div>
+              <p class="pdesc">Built personalized email templates using dynamic content blocks in Adobe Campaign 
+                increasing open and click-through rates by 25% through data-based personalization. Connected customer attributes and 
+                preferences through SQL queries to generate relevant, high-conversion messages.</p>
             </div>
           </div>
         </article>
+    
+
+      <article class="pcard">
+          <div class="pinner">
+            <div>
+              <div class="ptitle">Lead Nurturing Workflow (B2B CRM Integration)</div>
+              <div class="ptag"><span>Adobe Campaign</span><span>ETL</span><span>CRM Analytics</span></div>
+              <p class="pdesc">Built a lead nurturing workflow for B2B audiences integrating Adobe Campaign 
+                with Salesforce CRM. Designed scoring logic to qualify leads and send personalized nurture sequences.</p>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="pcard">
+          <div class="pinner">
+            <div>
+              <div class="ptitle">Campaign Data Quality Monitor</div>
+              <div class="ptag"><span>Adobe Campaign</span><span>ETL</span><span>CRM Analytics</span></div>
+              <p class="pdesc">Created a data quality validation framework to identify missing or inconsistent campaign data. 
+                Built workflows that automatically notified teams when audience or personalization data failed validation checks.
+                 Triggered real-time communications across Email, Push, and In-App channels.</p>
+            </div>
+          </div>
+        </article>
+</div> 
+
+        <!-- Project Management -->
+<div class="cat mt-16"><span class="badge">Project Management</span></div>
+<div class="pgrid">
+
+  <!-- 1: Marketing Analytics Dashboard -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Marketing Analytics Dashboard</div>
+        <div class="ptag"><span>Power BI</span><span>SQL</span><span>Data Visualization</span></div>
+        <p class="pdesc">
+          Built an end-to-end Power BI dashboard consolidating marketing campaign performance, ROI, and customer engagement metrics. 
+          Designed KPI reports for leadership to track channel efficiency, campaign spend, and audience growth across regions.
+        </p>
       </div>
+    </div>
+  </article>
+
+  <!-- 2: Cross-Functional Project Tracker -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Cross-Functional Project Tracker</div>
+        <div class="ptag"><span>Excel VBA</span><span>Project Planning</span><span>Automation</span></div>
+        <p class="pdesc">
+          Developed an automated project tracker using Excel VBA to manage tasks, dependencies, and deadlines for multiple teams. 
+          Improved project transparency and collaboration by aligning weekly deliverables with roadmap milestones.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3: Agile Sprint Management System -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Agile Sprint Management System</div>
+        <div class="ptag"><span>Jira</span><span>Confluence</span><span>Scrum</span></div>
+        <p class="pdesc">
+          Implemented an agile sprint tracking system integrating Jira and Confluence for project documentation, retrospectives, and reporting. 
+          Streamlined sprint planning and velocity tracking, enhancing delivery efficiency by 15%.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4: Stakeholder Communication Portal -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Stakeholder Communication Portal</div>
+        <div class="ptag"><span>JIRA</span><span>Stakeholder Management</span><span>Reporting</span></div>
+        <p class="pdesc">
+          Created a centralized project communication hub using JIRA to document decisions, share updates, and align stakeholder expectations. 
+          Reduced status meeting overhead and improved visibility into ongoing project milestones.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5: Product Requirement Documentation -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Product Requirement Documentation</div>
+        <div class="ptag"><span>Figma</span><span>Jira</span><span>Adobe XD</span></div>
+        <p class="pdesc">
+          Collaborated with design and engineering teams to create detailed PRDs, mockups, and acceptance criteria. 
+          Facilitated sprint planning by translating business goals into actionable user stories and product features.
+        </p>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+
 
       <!-- Visualization -->
-      <div class="cat mt-16"><span class="badge">Visualization</span></div>
+      <div class="cat mt-16"><span class="badge">Product Management</span></div>
       <div class="pgrid">
-        <article class="pcard">
-          <div class="pinner">
-            <div>
-              <div class="ptitle">Placeholder Viz</div>
-              <div class="ptag"><span>Power BI</span><span>Design</span></div>
-              <p class="pdesc">Aesthetic KPI tiles, bookmarks, and performance-tuned models.</p>
-            </div>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pinner">
-            <div>
-              <div class="ptitle">Placeholder Viz</div>
-              <div class="ptag"><span>Tableau</span><span>Story</span></div>
-              <p class="pdesc">Narrative dashboards with parameter controls and actions.</p>
-            </div>
-          </div>
-        </article>
+        
+  <!-- 1: Product Feature Prioritization Dashboard -->
+  <article class="pcard">
+    <div class="pinner">
+      <div>
+        <div class="ptitle">Product Feature Prioritization Dashboard</div>
+        <div class="ptag">
+          <span>Power BI</span>
+          <span>Jira</span>
+          <span>Customer Insights</span>
+        </div>
+        <p class="pdesc">
+          Designed a data-driven dashboard to prioritize product features using customer feedback, usage metrics, and business impact scores.
+          Collaborated with engineering and design teams to translate insights into actionable roadmap decisions that improved release efficiency by 20%.
+        </p>
       </div>
+    </div>
+  </article>
+
+  <article class="pcard">
+  <div class="pinner">
+    <div>
+      <div class="ptitle">Go-To-Market Strategy Dashboard</div>
+      <div class="ptag">
+        <span>Power BI</span>
+        <span>SQL</span>
+        <span>Stakeholder Insights</span>
+      </div>
+      <p class="pdesc">
+        Built a Go-To-Market analytics dashboard consolidating campaign, sales, and product usage data to track launch performance. 
+        Partnered with marketing and sales teams to define success metrics and optimize targeting strategy for new product rollouts.
+      </p>
+    </div>
+  </div>
+</article>
+
+      </div></div>  
     </section>
 
     <!-- ===== SKILLS ===== -->
+
+
     <section id="skills" class="section">
       <h2 class="h2">Skills</h2>
       <div class="skills-grid">
         <div class="glass skill">
-          <h4>Languages & Tools</h4>
-          <p>JavaScript, Python, Java, SQL, NoSQL, HTML, CSS, Git</p>
+          <h4>Libraries / Data</h4>
+          <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, NLTK, OpenAI API</p>
           <div class="meter"><span style="--w:92%"></span></div>
         </div>
+     
         <div class="glass skill">
-          <h4>Libraries / Data</h4>
-          <p>Pandas, NumPy</p>
-          <div class="meter"><span style="--w:85%"></span></div>
-        </div>
-        <div class="glass skill">
-          <h4>Databases</h4>
-          <p>MS SQL Server, PostgreSQL</p>
+          <h4>Data Analytics & BI</h4>
+          <p>Data Cleaning, ETL, Data Modeling, KPI Design, Dashboard Automation, Statistical Analysis, A/B Testing, Forecasting, Segmentation</p>
           <div class="meter"><span style="--w:82%"></span></div>
         </div>
         <div class="glass skill">
           <h4>Tools / Platforms</h4>
-          <p>Adobe Campaign, UNICA, Redpoint, AWS, QuickSight, Looker Studio</p>
+          <p>Adobe Campaign Classic, Journey Optimizer, Marketo, UNICA, 
+             Salesforce CRM, HubSpot, AWS, Azure, QuickSight, Looker Studio, Tableau, Power BI</p>
           <div class="meter"><span style="--w:88%"></span></div>
         </div>
-      </div>
+     
+      <div class="glass skill">
+          <h4>Project / Product Management</h4>
+          <p>Agile, Scrum, Jira, Confluence, Figma, Notion, Product Roadmapping, Stakeholder Communication, Requirement Gathering</p>
+          <div class="meter"><span style="--w:88%"></span></div>
+        </div>
+      </div> </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
